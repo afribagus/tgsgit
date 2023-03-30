@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="icon" href="images/logo/e.png">
+    <title>PUSING.TV</title>
+
+    <style>
+        /* Default button styles */
+        button {
+            background-color: blue;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    
+        /* Button styles when clicked */
+        button.clicked {
+            background-color: green;
+        }
+    </style>
+
+   
+</head>
+
+<body>
+    <!--Header section-->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <img src="images/logo/e.png" alt="" width="55" height="40">
+            <a class="navbar-brand" href="#">PUSING.TV</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="tugas.html">Tugas Dom</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Movies</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="series.html">Series</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Category
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="trend.html">Popular</a></li>
+                            <li><a class="dropdown-item" href="all.html">all Movies</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item"><button type="button" class="btn btn-primary"
+                                        data-bs-toggle="modal" data-bs-target="#contactModal">
+                                        Contact Us
+                                    </button></a></li>
+                        </ul>
+                    </li>
+                    <nav class="nav nav-pills flex-column flex-sm-row">
+                        <a class="flex-sm-fill text-sm-center" aria-current="page" href="#">
+                            <button type="button" class="btn btn-outline-info" data-bs-toggle="modal"
+                                data-bs-target="#loginModal">Login</button></a>
+                        <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel"
+                            aria-hidden="true">
+                            <!--modal login-->
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="loginModalLabel">Login</h5>
+                                        <button type="button" class="btn-info" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+                                            <div class="mb-3">
+                                                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                                    aria-describedby="emailHelp">
+                                                <div id="emailHelp" class="form-text">We'll never share your email with
+                                                    anyone else.</div>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="exampleInputPassword1" class="form-label">Password</label>
+                                                <input type="password" class="form-control" id="exampleInputPassword1">
+                                            </div>
+                                            <button type="submit" class="btn btn-info">Login</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Modal Contact Us -->
+                        <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="contactModalLabel">Contact Us</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+                                            <div class="mb-3">
+                                                <label for="name" class="form-label">Name</label>
+                                                <input type="text" class="form-control" id="name" required>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="email" class="form-label">Email</label>
+                                                <input type="email" class="form-control" id="email" required>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="message" class="form-label">Message</label>
+                                                <textarea class="form-control" id="message" rows="5"
+                                                    required></textarea>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+                                        <button type="submit" class="btn btn-primary">Send</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-info" type="submit">Search</button>
+                </form>
+
+                </li>
+            </div>
+        </div>
+
+    </nav>
+    <!----------------->
+
+    <!--alertl-->
+    <section>
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong>Welcome..!!</strong> You should check in on our new realese.
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        
+    </section>
+    <!-- bread crump -->
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item"><a href="series.html">Series</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Trend</li>
+        </ol>
+    </nav>
+<body class="light-mode">
+    <h1>Light/Dark Mode</h1>
+    <button id="toggle-btn">Toggle Mode</button>
+    <script src="script.js"></script>
+</body>
+    <h2>Change Button Color</h2>
+    <button id="my-button">Click Me</button>
+    <script src="script.js"></script>
+    <!--card-->
+   
+    <h2>Popular Movies </h2>
+    <div class="latest-container">
+        <div class="latest-inside">
+            <img src="images/trending/01.jpg" alt="">
+            <div class="heading1">
+                <h4>Crayon ShinChan</h4>
+                <p><span>&#9733;&#9733;&#9733;&#9733;&#9734; </span></p>
+                <h6>Comedy Cartoon</h6>
+            </div>
+            <div class="btn2">
+                <a href="">Watch Now</a>
+
+            </div>
+        </div>
+        <div class="latest-inside">
+            <img src="images/trending/02.jpg" alt="">
+            <div class="heading1">
+                <h4>Shutter Island</h4>
+                <p><span>&#9733;&#9733;&#9733;&#9733;&#9734; </span></p>
+                <h6>Thriller</h6>
+            </div>
+            <div class="btn2">
+                <a href="">Watch Now</a>
+            </div>
+        </div>
+        <div class="latest-inside">
+            <img src="images/trending/03.jpeg" alt="">
+            <div class="heading1">
+                <h4>2Gether Movie</h4>
+                <p><span>&#9733;&#9733;&#9733;&#9733;&#9734; </span></p>
+                <h6>Romance</h6>
+            </div>
+            <div class="btn2">
+                <a href="">Watch Now</a>
+            </div>
+        </div>
+        <div class="latest-inside">
+            <img src="images/trending/04.jpg" alt="">
+            <div class="heading1">
+                <h4>Crayon ShinChan</h4>
+                <p><span>&#9733;&#9733;&#9733;&#9733;&#9734; </span></p>
+                <h6>Comedy Cartton</h6>
+            </div>
+            <div class="btn2">
+                <a href="">Watch Now</a>
+            </div>
+        </div>
+
+        <div class="latest-inside">
+            <img src="images/trending/05.jpg" alt="">
+            <div class="heading1">
+                <h4>Venom</h4>
+                <p><span>&#9733;&#9733;&#9733;&#9733;&#9734; </span></p>
+                <h6>Action</h6>
+            </div>
+            <div class="btn2">
+                <a href="">Watch Now</a>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!---Hollywood Movies-->
+    <section>
+        <div class="hollywood-movies" id="hollywood">
+            <h2>HOLLYWOOD MOVIES</h2>
+            <div class="hollywood-container">
+                <div class="hollywood-inside">
+                    <img src="images/hollywood/2.jpg" alt="">
+                    <h6>TENET</h6>
+                    <div class="imdb">
+                        <p>9.8</p>
+                    </div>
+                </div>
+                <div class="hollywood-inside">
+                    <img src="images/hollywood/12.jpg" alt="">
+                    <h6>WW 84</h6>
+                    <div class="imdb">
+                        <p>8.5</p>
+                    </div>
+                </div>
+                <div class="hollywood-inside">
+                    <img src="images/hollywood/13.jpg" alt="">
+                    <h6>MONOCHROME</h6>
+                    <div class="imdb">
+                        <p>9.2</p>
+                    </div>
+                </div>
+                <div class="hollywood-inside">
+                    <img src="images/hollywood/14.jpg" alt="">
+                    <h6>MORTAL</h6>
+                    <div class="imdb">
+                        <p>8.5</p>
+                    </div>
+                </div>
+                <div class="hollywood-inside">
+                    <img src="images/hollywood/15.jpg" alt="">
+                    <h6>DONT LOOK BACK</h6>
+                    <div class="imdb">
+                        <p>8.9</p>
+                    </div>
+                </div>
+                <div class="hollywood-inside">
+                    <img src="images/hollywood/3.jpg" alt="">
+                    <h6>BLOOD HOUND</h6>
+                    <div class="imdb">
+                        <p>8.5</p>
+                    </div>
+                </div>
+                <div class="hollywood-inside">
+                    <img src="images/hollywood/1.jpg" alt="">
+                    <h6>REUNION</h6>
+                    <div class="imdb">
+                        <p>9.5</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!------------->
+
+    <!---thailand-->
+    <section>
+        <div class="thai-movies" id="tollywood">
+            <h2>Thailand Movies</h2>
+            <div class="thai-container">
+                <div class="thai-inside">
+                    <img src="images/Thailand/01.jpg" alt="">
+                    <h3>Present Perfect</h3>
+                    <div class="imdb">
+                        <p>9.8</p>
+                    </div>
+                </div>
+                <div class="thai-inside">
+                    <img src="images/Thailand/02.jpg" alt="">
+                    <h3>Love Destiny</h3>
+                    <div class="imdb">
+                        <p>8.5</p>
+                    </div>
+                </div>
+                <div class="thai-inside">
+                    <img src="images/Thailand/03.jpg" alt="">
+                    <h3>Fast Feel & Love</h3>
+                    <div class="imdb">
+                        <p>9.2</p>
+                    </div>
+                </div>
+                <div class="thai-inside">
+                    <img src="images/Thailand/04.jpg" alt="">
+                    <h3>Tell the World I Love You</h3>
+                    <div class="imdb">
+                        <p>8.5</p>
+                    </div>
+                </div>
+                <div class="thai-inside">
+                    <img src="images/Thailand/05.jpg" alt="">
+                    <h3>How to Win at Checker</h3>
+                    <div class="imdb">
+                        <p>8.9</p>
+                    </div>
+                </div>
+                <div class="thai-inside">
+                    <img src="images/Thailand/06.jpg" alt="">
+                    <h3>Inhuman Kiss</h3>
+                    <div class="imdb">
+                        <p>8.5</p>
+                    </div>
+                </div>
+                <div class="thai-inside">
+                    <img src="images/Thailand/07.jpg" alt="">
+                    <h3>2Gether Movies</h3>
+                    <div class="imdb">
+                        <p>9.5</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!------------->
+
+
+    <!--Indo Movies-->
+    <section>
+        <h2>Indonesia Movie</h2>
+        <div class="indonesia-container">
+            <div class="indonesia-inside">
+                <img src="images/indonesia/01.jpg" alt="">
+                <h6>Cek Toko Sebelah</h6>
+                <div class="imdb">
+                    <p>9.8</p>
+                </div>
+            </div>
+            <div class="indonesia-inside">
+                <img src="images/indonesia/02.jpg" alt="">
+                <h6>Tarian Lengger</h6>
+                <div class="imdb">
+                    <p>7.5</p>
+                </div>
+            </div>
+            <div class="indonesia-inside">
+                <img src="images/indonesia/03.jpg" alt="">
+                <h6>Kalian Pantas Mati</h6>
+                <div class="imdb">
+                    <p>8.0</p>
+                </div>
+            </div>
+            <div class="indonesia-inside">
+                <img src="images/indonesia/04.jpg" alt="">
+                <h6>Perempuan Tanah Jahanam</h6>
+                <div class="imdb">
+                    <p>8.5</p>
+                </div>
+            </div>
+            <div class="indonesia-inside">
+                <img src="images/indonesia/05.jpg" alt="">
+                <h6>Warkop Reborn</h6>
+                <div class="imdb">
+                    <p>9.0</p>
+                </div>
+            </div>
+            <div class="indonesia-inside">
+                <img src="images/indonesia/06.jpg" alt="">
+                <h6>Mencuri Raden Saleh</h6>
+                <div class="imdb">
+                    <p>9.2</p>
+                </div>
+            </div>
+            <div class="indonesia-inside">
+                <img src="images/indonesia/07.jpg" alt="">
+                <h6>Dilan 1991</h6>
+                <div class="imdb">
+                    <p>9.5</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!------------->
+
+    <!---iollywood Movies-->
+    <section>
+        <h2>Bollywood Movies</h2>
+        <div class="bolly-container">
+            <div class="bolly-inside">
+                <img src="images/tamil/a.jpg" alt="">
+                <h6>MEESAYA MURUKU</h6>
+                <div class="imdb">
+                    <p>9.8</p>
+                </div>
+            </div>
+            <div class="bolly-inside">
+                <img src="images/tamil/b.jpg" alt="">
+                <h6>96</h6>
+                <div class="imdb">
+                    <p>7.5</p>
+                </div>
+            </div>
+            <div class="bolly-inside">
+                <img src="images/tamil/6.jpg" alt="">
+                <h6>KHAANI</h6>
+                <div class="imdb">
+                    <p>8.0</p>
+                </div>
+            </div>
+            <div class="bolly-inside">
+                <img src="images/tamil/c.jpg" alt="">
+                <h6>GANGA</h6>
+                <div class="imdb">
+                    <p>8.5</p>
+                </div>
+            </div>
+            <div class="bolly-inside">
+                <img src="images/tamil/d.jpg" alt="">
+                <h6>DEV</h6>
+                <div class="imdb">
+                    <p>9.0</p>
+                </div>
+            </div>
+            <div class="bolly-inside">
+                <img src="images/tamil/e.jpg" alt="">
+                <h6>NAA ROWDY DA</h6>
+                <div class="imdb">
+                    <p>9.2</p>
+                </div>
+            </div>
+            <div class="bolly-inside">
+                <img src="images/tamil/1.jpg" alt="">
+                <h6>BIRBAL</h6>
+                <div class="imdb">
+                    <p>9.5</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!------------->
+    <section class="akira" id="youtube">
+        <div class="line">
+            <h1>YOUTUBE MOVIES</h1>
+            <p>BLOCKBUSTER OF THE MONTH.</p>
+            <div class="yt-container">
+                <div class="inside-yt">
+                    <img src="images/yt/1.jpg" alt="">
+                    <div class="heading2">
+                        <p>ASPIRANTS</p>
+                        <p><span>&#9733;&#9733;&#9733;&#9734;&#9734;</span>
+                        <div class="like">
+                            <span><i class="fas fa-thumbs-up">52k</i></span>
+                            <p>2021</p>
+                        </div>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="inside-yt">
+                    <img src="images/yt/2.jpg" alt="">
+                    <div class="heading2">
+                        <p>KOTA FACTORY</p>
+                        <p><span>&#9733;&#9733;&#9733;&#9734;&#9733;</span>
+                        <div class="like">
+                            <span><i class="fas fa-thumbs-up">122k</i></span>
+                            <p>2020</p>
+                        </div>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="inside-yt">
+                    <img src="images/yt/3.jpg" alt="">
+                    <div class="heading2">
+                        <p>SOFTWARE DEV</p>
+                        <p><span>&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                        <div class="like">
+                            <span><i class="fas fa-thumbs-up">142k</i></span>
+                            <p>2019</p>
+                        </div>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="inside-yt">
+                    <img src="images/yt/4.jpg" alt="">
+                    <div class="heading2">
+                        <p>SEX LIFE</p>
+                        <p><span>&#9733;&#9733;&#9733;&#9734;&#9733;</span>
+                        <div class="like">
+                            <span><i class="fas fa-thumbs-up">100k</i></span>
+                            <p>2000</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="youtubebtn">
+        <a href="">Watch More<i class="fab fa-youtube"></i></a>
+    </div>
+
+
+    <!---Footer-->
+    <div class="footer">
+        <div class="inside-footer">
+            <div class="footer-container">
+                <div class="logopart">
+                    <h1>PUSING.TV</h1>
+                    <img src="images/logo/e.png" alt="">
+                </div>
+                <div class="copyright">
+                    <p>copyright &copy <span>Bagus Afrianto FE-B2</span> All Rights Reserved-2023</p>
+                </div>
+                <div class="socials">
+                    <i class="fab fa-facebook-square"></i>
+                    <i class="fab fa-youtube"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-pinterest"></i>
+                </div>
+                <div class="btn4">
+                    <a href="">Subscribe Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!------>
+
+    <!--Goto button-->
+    <div class="scroll">
+        <a href=""><i class="fas fa-arrow-up"></i></a>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=3, initial-scale=1.0">
+	<title>Document</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+		crossorigin="anonymous"></script>
+</head>
+
+<header>
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+			<div class="container-fluid">
+				<img src="images/logo/e.png" alt="" width="55" height="40">
+				<a class="navbar-brand" href="#">PUSING.TV</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+					aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+						<li class="nav-item">
+							<a class="nav-link active" aria-current="page" href="tugas.html">Tugas Dom</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link active" aria-current="page" href="index.html">Movies</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="series.html">Series</a>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+								data-bs-toggle="dropdown" aria-expanded="false">
+								Category
+							</a>
+							<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+								<li><a class="dropdown-item" href="trend.html">Popular</a></li>
+								<li><a class="dropdown-item" href="all.html">All Movies</a></li>
+								<li>
+									<hr class="dropdown-divider">
+								</li>
+								<li><a class="dropdown-item"><button type="button" class="btn btn-primary"
+											data-bs-toggle="modal" data-bs-target="#contactModal">
+											Contact Us
+										</button></a></li>
+							</ul>
+						</li>
+						<nav class="nav nav-pills flex-column flex-sm-row">
+							<a class="flex-sm-fill text-sm-center" aria-current="page" href="#">
+								<button type="button" class="btn btn-outline-info" data-bs-toggle="modal"
+									data-bs-target="#loginModal">Login</button></a>
+							<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel"
+								aria-hidden="true">
+								<!--modal login-->
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="loginModalLabel">Login</h5>
+											<button type="button" class="btn-info" data-bs-dismiss="modal"
+												aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+											<form>
+												<div class="mb-3">
+													<label for="exampleInputEmail1" class="form-label">Email address</label>
+													<input type="email" class="form-control" id="exampleInputEmail1"
+														aria-describedby="emailHelp">
+													<div id="emailHelp" class="form-text">We'll never share your email with
+														anyone else.</div>
+												</div>
+												<div class="mb-3">
+													<label for="exampleInputPassword1" class="form-label">Password</label>
+													<input type="password" class="form-control" id="exampleInputPassword1">
+												</div>
+												<button type="submit" class="btn btn-info">Login</button>
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- Modal Contact Us -->
+							<div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel"
+								aria-hidden="true">
+								<div class="modal-dialog modal-dialog-centered">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title" id="contactModalLabel">Contact Us</h5>
+											<button type="button" class="btn-close" data-bs-dismiss="modal"
+												aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+											<form>
+												<div class="mb-3">
+													<label for="name" class="form-label">Name</label>
+													<input type="text" class="form-control" id="name" required>
+												</div>
+												<div class="mb-3">
+													<label for="email" class="form-label">Email</label>
+													<input type="email" class="form-control" id="email" required>
+												</div>
+												<div class="mb-3">
+													<label for="message" class="form-label">Message</label>
+													<textarea class="form-control" id="message" rows="5" required></textarea>
+												</div>
+											</form>
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-secondary"
+												data-bs-dismiss="modal">Close</button>
+											<button type="submit" class="btn btn-primary">Send</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</nav>
+					</ul>
+					<form class="d-flex">
+						<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+						<button class="btn btn-outline-info" type="submit">Search</button>
+					</form>
+		
+					</li>
+				</div>
+			</div>
+		
+		</nav>
+</header>
+<body>
+	<h3> Inline js</h3>
+	<button onclick="alert('List')"> open</button></button>
+
+	<div>
+		<h3 id="title">01. finding element</h3>
+		
+		<p class="paragraph">ini paragraph</p>
+		<p class="paragraph">ini parahgrap cerita</p>
+		
+		<ul>
+			<li>Item 1</li>
+			<li>Item 2</li>
+			<li>Item 3</li>
+		</ul>
+		
+		<script>
+
+			// Find elements by ID
+			const title = document.getElementById("title");
+			console.log(title.innerText); // Outputs "Hello World!"
+
+			// Find elements by class name
+			const paragraphs = document.getElementsByClassName("paragraph");
+			console.log(paragraphs.length); // Outputs 2
+
+			// Find elements by tag name
+			const listItems = document.getElementsByTagName("li");
+			console.log(listItems.length); // Outputs 3
+
+			// Find elements using CSS selectors
+			const firstParagraph = document.querySelector(".paragraph");
+			console.log(firstParagraph.innerText); // Outputs "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+
+			const secondListItem = document.querySelector("li:nth-of-type(2)");
+			console.log(secondListItem.innerText); // Outputs "Item 2"
+
+		</script>
+	</div>
+
+	<div>
+		<title>Contoh Mencari Elemen HTML dengan JavaScript</title>
+		</head>
+		
+		<body>
+			<h2 id="titel">Contoh Mencari Elemen HTML dengan JavaScript</h2>
+		
+			<p>Masukkan ID elemen HTML yang ingin Anda temukan:</p>
+			<input type="text" id="inputID">
+			<button onclick="cariElemen()">Cari</button>
+		
+			<div id="hasil"></div>
+		
+			<script>
+				// Fungsi untuk mencari elemen HTML
+				function cariElemen() {
+					var inputID = document.getElementById("inputID").value;
+					var elemen = document.getElementById(inputID);
+					if (elemen) {
+						document.getElementById("hasil").innerHTML = "Elemen dengan ID " + inputID + " ditemukan!";
+					} else {
+						document.getElementById("hasil").innerHTML = "Elemen dengan ID " + inputID + " tidak ditemukan.";
+					}
+				}
+			</script>
+	</div>
+
+	<div>
+		<h3 id="judul">01. Change html element</h3>
+		
+		<button onclick="changeTitle()">Change Title</button>
+		
+		<script>
+
+			function changeTitle() {
+				const title = document.getElementById("judul");
+				title.innerText = "Welcome to my website";
+			}
+
+		</script>
+	</div>
+
+	<div>
+		<h3 id="judul">02. Adding & Deleting Element HTML</h3>
+		
+		<div id="container">
+			<p>Ini adalah contoh paragraf.</p>
+			<button onclick="tambahElemen()">Tambahkan Elemen Film</button>
+			<button onclick="hapusElemen()">Hapus Elemen Film</button>
+		</div>
+		
+		<script>
+			function tambahElemen() {
+				var div = document.createElement("div");
+				div.innerHTML = "Ini adalah elemen yang ditambahkan.";
+				document.getElementById("container").appendChild(div);
+			}
+
+			function hapusElemen() {
+				var container = document.getElementById("container");
+				var divs = container.getElementsByTagName("div");
+				if (divs.length > 1) {
+					container.removeChild(divs[divs.length - 1]);
+				}
+			}
+		</script>
+	</div>
+	
+	<div>
+			<h3 id="titel">03. Event Handler</h3>
+			
+			<button id="tombol">Klik aku</button>
+			
+			<script>
+				// Fungsi untuk menambahkan event handler ke tombol
+				function tambahEventHandler() {
+					var tombol = document.getElementById("tombol");
+					tombol.addEventListener("click", function () {
+						alert("Terima kasih");
+					});
+				}
+
+				// Panggil fungsi saat halaman dimuat
+				window.onload = function () {
+					tambahEventHandler();
+				};
+			</script>
+	</div>
+</body>
+</html>
